@@ -18,6 +18,7 @@
         "no-console": "off",
         "import/extensions": "off",
         "import/no-unresolved": "off",
-        "object-curly-newline": "off"
+        "object-curly-newline": "off",
+        "import/prefer-default-export": "off"
     }
 }
