@@ -33,7 +33,7 @@ model BlogPost {
   id         String   @id @default(uuid())
   title      String
   content    String
-  createddAt DateTime @default(now())
+  createdAt  DateTime @default(now())
   updatedAt  DateTime @default(now())
   userId     String
 
