@@ -17,6 +17,7 @@
     "rules": {
         "no-console": "off",
         "import/extensions": "off",
-        "import/no-unresolved": "off"
+        "import/no-unresolved": "off",
+        "object-curly-newline": "off"
     }
 }
