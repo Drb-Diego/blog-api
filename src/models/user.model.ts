@@ -14,6 +14,12 @@ const createUser = async ({ name, email, image, password }: IUser) => {
   return userCreated;
 };
 
+const getAll = async () => {
+  const allUsers = await connection.users.findMany();
+  return allUsers;
+};
+
 export default {
   createUser,
+  getAll,
 };

@@ -12,6 +12,13 @@ const createUser = async (request: Request, response: Response) => {
   return response.status(statusCodes.CREATED).json({ token });
 };
 
+const getAll = async (_request: Request, response: Response) => {
+  const allUsers = await userService.getAll();
+
+  return response.status(statusCodes.OK).json(allUsers);
+};
+
 export default {
   createUser,
+  getAll,
 };

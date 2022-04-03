@@ -10,6 +10,12 @@ const createUser = async (user: IUser) => {
   return token;
 };
 
+const getAll = async () => {
+  const allUsers = await userModel.getAll();
+  return allUsers;
+};
+
 export default {
   createUser,
+  getAll,
 };
