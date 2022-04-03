@@ -19,6 +19,7 @@
         "import/extensions": "off",
         "import/no-unresolved": "off",
         "object-curly-newline": "off",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "consistent-return": "off"
     }
 }
