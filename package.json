@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build && node dist/server.js",
-    "dev": "ts-node-dev src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --exit-child  src/server.ts",
     "build": "tsc"
   },
   "devDependencies": {
