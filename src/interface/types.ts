@@ -5,6 +5,12 @@ interface IUser {
   image: string;
 }
 
+interface ILogin {
+  email: string;
+  password: string;
+}
+
 export {
   IUser,
+  ILogin,
 };
