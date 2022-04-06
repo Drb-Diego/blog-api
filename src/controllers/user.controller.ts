@@ -18,7 +18,18 @@ const getAll = async (_request: Request, response: Response) => {
   return response.status(statusCodes.OK).json(allUsers);
 };
 
+const getById = async (request: Request, response: Response) => {
+  const { id } = request.params;
+
+  const userFinded = await userService.getById(id);
+
+  if (userFinded) return response.status(statusCodes.OK).json(userFinded);
+
+  return response.status(statusCodes.NOT_FOUND).json({ message: 'User not found' });
+};
+
 export default {
   createUser,
   getAll,
+  getById,
 };

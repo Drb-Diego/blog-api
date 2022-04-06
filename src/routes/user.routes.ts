@@ -8,5 +8,6 @@ const routes = Router();
 
 routes.post('/user', validateUsers, userController.createUser);
 routes.get('/user', validateToken, userController.getAll);
+routes.get('/user/:id', validateToken, userController.getById);
 
 export default routes;

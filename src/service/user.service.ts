@@ -15,7 +15,14 @@ const getAll = async () => {
   return allUsers;
 };
 
+const getById = async (id: string) => {
+  const userFinded = await userModel.getById(id);
+
+  if (userFinded) return userFinded;
+};
+
 export default {
   createUser,
   getAll,
+  getById,
 };

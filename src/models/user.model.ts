@@ -19,7 +19,16 @@ const getAll = async () => {
   return allUsers;
 };
 
+const getById = async (id: string) => {
+  const userFinded = await connection.users.findFirst({
+    where: { id },
+  });
+
+  return userFinded;
+};
+
 export default {
   createUser,
   getAll,
+  getById,
 };
