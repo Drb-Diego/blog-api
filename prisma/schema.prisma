@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./BlogDatabase.db"
+  url      = env("DATABASE_URL")
 }
 
 model Users {
@@ -30,12 +30,12 @@ model Category {
 }
 
 model BlogPost {
-  id         String   @id @default(uuid())
-  title      String
-  content    String
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @default(now())
-  userId     String
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  userId    String
 
   Users Users @relation(fields: [userId], references: [id])
 
@@ -44,7 +44,7 @@ model BlogPost {
 }
 
 model PostCategory {
-  id String     @id  @default(uuid())
+  id String @id @default(uuid())
 
   postId     String
   categoryId String
